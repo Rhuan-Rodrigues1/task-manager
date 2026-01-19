@@ -6,6 +6,5 @@ exports.readTaskController = (req, res) => {
         res.status(200).json(readTaskService());
     } catch (error) {
         console.log(error);
-        
     }
 };
