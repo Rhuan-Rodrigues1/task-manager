@@ -1,5 +1,6 @@
 const { readTaskService } = require("./readTasksService");
 const { saveTasksService } = require("./saveTasksService");
+const db = require("../database/EngineDatabase");
 
 
 exports.addTaskService = (data) => {
@@ -15,8 +16,7 @@ exports.addTaskService = (data) => {
         data: new Date().toISOString().split("T")[0]
     };
 
-    tasks.push(newTask);
-    saveTasksService(tasks);
+    db.insert(newTask)
 
     return newTask;
 };

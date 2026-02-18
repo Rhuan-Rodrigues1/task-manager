@@ -14,5 +14,18 @@
     "sector": "Saúde2123asd",
     "status": "Resolvido",
     "data": "2026-01-19"
+  },
+  {
+    "id": 1771446944477,
+    "status": "Aberta",
+    "data": "2026-02-18"
+  },
+  {
+    "id": 1771447004000,
+    "title": "Internet caiu212asd3",
+    "description": "Sem acesso à rede2123asd",
+    "sector": "Saúde2123asd",
+    "status": "Aberta",
+    "data": "2026-02-18"
   }
 ]

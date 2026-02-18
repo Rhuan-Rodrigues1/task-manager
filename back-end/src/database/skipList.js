@@ -6,7 +6,7 @@ class Node {
     }
 }
 
-class SkipLevel {
+class SkipList {
     constructor(maxLevel = 6, p = 0.5) {
         this.maxLevel = maxLevel;
         this.p = p;
@@ -35,7 +35,7 @@ class SkipLevel {
         current = current.forward[0];
 
         if(current && current.key === key) {
-            current.values.push(value);
+            current.value.push(value);
             return;
         }
 
@@ -74,4 +74,19 @@ class SkipLevel {
         return [];
     }
 
+    getAll() {
+        const result = [];
+
+        let current = this.header.forward[0];
+
+        while(current) {
+            result.push(current.value);
+            current = current.forward[0];
+        }
+
+        return result;
+    }
+
 }
+
+module.exports = SkipList;
